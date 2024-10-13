@@ -6,3 +6,87 @@
 	padding: 0;
 	font-family: Montserrat, sans-serif;
 }
+
+:root {
+	--escuro: #0f0f0f;
+	--offwhite: #f2f0ef;
+	--colorTemp: #d9d9d9;
+}
+
+body {
+	background: var(--offwhite);
+}
+
+header {
+	height: 60px;
+	padding: 0 40px;
+
+	background: var(--escuro);
+}
+
+.nav-header {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+
+	height: 100%;
+
+	color: #fff;
+	font-size: 30px;
+}
+
+main {
+	padding: 0 40px;
+}
+
+/*Estilizando o carrossel da home*/
+#main-carousel {
+	width: 300px;
+	height: 180px;
+	margin: auto;
+	border-radius: 30px;
+
+	background: var(--colorTemp);
+}
+
+/*Estilizando o atalho das categorias*/
+.speed-access {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+
+	margin: auto;
+}
+
+aside .access-button {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	justify-content: space-between;
+
+	height: 75px;
+	max-width: 80px;
+}
+
+aside .access-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+
+	background: var(--escuro);
+}
+
+aside .name-access {
+	font-family: Inter, sans-serif;
+	font-weight: 600;
+	font-size: 15px;
+
+	text-transform: capitalize;
+}
+
