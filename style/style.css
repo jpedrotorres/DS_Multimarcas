@@ -1,4 +1,9 @@
 @charset "utf-8";
+
+/*Arquivos internos*/
+@import url("category.css");
+
+/*Arquivos externos*/
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jockey+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -30,10 +35,9 @@ header {
 }
 
 .nav-header {
-	display: flex;
-	flex-flow: row wrap;
+	display: grid;
+	grid-template-columns: 30% 40% 30%;
 	align-items: center;
-	justify-content: space-between;
 	row-gap: .8em;
 
 	height: 100%;
@@ -44,11 +48,25 @@ header {
 
 .nav-header > * {
 	display: flex;
+	align-items: center;
 
 	cursor: pointer;
 }
 
+#icon-burger {
+	justify-content: left;
+}
+
+#logo-header {
+	justify-content: center;
+}
+
+#icon-cart {
+	justify-content: right;
+}
+
 .nav-header > #menu-category {
+	grid-column: 1/4;
 	display: none;
 
 	width: 100%;
@@ -85,10 +103,6 @@ header {
 	color: inherit;
 
 	text-decoration: none;
-}
-
-#logo-header > img {
-	height: 35px;
 }
 
 main {
