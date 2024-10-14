@@ -20,6 +20,9 @@ body {
 }
 
 header {
+	position: fixed;
+
+	width: calc(100vw - 80px);
 	height: 60px;
 	padding: 0 40px;
 
@@ -38,8 +41,22 @@ header {
 	font-size: 30px;
 }
 
+.nav-header > * {
+	display: flex;
+
+	cursor: pointer;
+}
+
+.nav-header > ul {
+	display: none;
+}
+
+#logo-header > img {
+	height: 35px;
+}
+
 main {
-	padding: 0 40px;
+	padding: 80px 40px 0;
 }
 
 /*Estilizando o carrossel da home*/
