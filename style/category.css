@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+/*Alterando botão adicional (voltar) no header*/
+#icon-back {
+	justify-content: left;
+
+	font-family: Cairo, sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+
+	text-transform: uppercase;
+}
+
+main {
+	/*90px- Padding top main; 397px- height footer*/
+	min-height: calc(100vh - 90px - 397px);
+}
+
+/*Estilizando informativo do caminho*/
+.path-general {
+	display: flex;
+	align-items: center;
+	column-gap: .2em;
+
+	font-family: Cairo, sans-serif;
+
+	margin-bottom: 20px;
+	text-transform: capitalize;
+}
+
+/*Estilizando título da categoria*/
+#title-category {
+	color: var(--cinzaa);
+	text-align: center;
+	font-family: Jockey One, sans-serif;
+	font-size: 40px;
+	font-weight: 500;
+
+	margin-bottom: 30px;
+	text-transform: uppercase;
+}
+
+/*Estilizando caixa de seleção*/
+#select-orderby-container {
+	margin-bottom: 15px;
+}
+
+#select-orderby {
+	position: relative;
+	left: calc(100% - 155px);
+
+	font-size: 12px;
+	font-weight: 600;
+	background: #ddd;
+
+	padding: 5px;
+	border: none;
+	border-radius: 8px;
+
+	text-transform: capitalize;
+}
