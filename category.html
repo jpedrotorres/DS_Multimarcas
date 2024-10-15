@@ -12,28 +12,44 @@
 <body>
 	<header>
 		<nav class= "nav-header">
-			<p id= "icon-burguer"><i class='bx bx-chevron-left'></i> voltar</p>
+			<p id= "icon-back"><i class='bx bx-chevron-left'></i> voltar</p>
 
 			<a href= "index.html" id= "logo-header"><img src= "img/logo/logo-ds-mini40.png" alt= "Logo DS Multimarcas"></a>
 
 			<p id= "icon-cart"><i class='bx bx-cart'></i></p>
-
-			<div id= "menu-category">
-				<h2 id= "title-menu">categorias</h2>
-
-				<ul id= "nav-category">
-					<li><a href= "category.html" class= "link-category">camisas</a>
-					<li><a href= "category.html" class= "link-category">relógios</a>
-					<li><a href= "category.html" class= "link-category">tênis</a>
-					<li><a href= "category.html" class= "link-category">eletrônicos</a>
-					<li><a href= "category.html" class= "link-category">copos</a>
-					<li><a href= "category.html" class= "link-category">perfumes</a>
-				</ul>
-			</div>
 		</nav>
 	</header>
 	<main>
+		<div class= "path-general">
+			<i class='bx bxs-home'></i> > <span id= "path-child">categoria</span>
+		</div>
 
+		<h1 id= "title-category">categoria</h1>
+
+		<div id= "select-orderby-container">
+			<select id= "select-orderby" name= "ordenar por">
+				<option value= "order-name">ordem alfabética a-z</option>
+				<option value= "order-nameReverse">ordem alfabética z-a</option>
+				<option value= "order-value">maior preço</option>
+				<option value= "order-valueReverse">menor preço</option>
+			</select>
+		</div>
+
+		<section id= "product-group-category">
+			<div class= "product-category">
+				<div class= "img-product-category"></div>
+				<div class= "info-product-category">
+					<h2 class= "title-product-category">título do produto</h2>
+					<p class= "price-product-category">r$00,00</p>
+				</div>
+			</div>
+
+			<aside id= "btn-pages-category">
+				<div class= "btn-page change-page"><i class='bx bx-chevron-left'></i> anterior</div>
+				<div class= "btn-page number-pages">1</div>
+				<div class= "btn-page change-page">seguinte <i class='bx bx-chevron-right'></i></div>
+			</aside>
+		</section>
 	</main>
 
 	<footer>
