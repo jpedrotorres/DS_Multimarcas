@@ -59,3 +59,77 @@ main {
 
 	text-transform: capitalize;
 }
+
+/*Estilizando a lista de produtos*/
+#product-group-category {
+}
+
+.product-category {
+	display: flex;
+}
+
+.img-product-category {
+	width: 100px;
+	height: 100px;
+	border-radius: 5px;
+
+	background: var(--colorTemp);
+}
+
+.info-product-category {
+	max-width: 200px;
+	margin-left: 15px;
+	margin-top: 5px;
+
+	text-transform: capitalize;
+}
+
+.title-product-category {
+	font-size: 15px;
+	font-weight: 600;
+
+	margin-bottom: 10px;
+}
+
+.price-product-category {
+	font-size: 18px;
+}
+
+/*Estilizando botões para as páginas de produtos*/
+#btn-pages-category {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: .7em;
+
+	margin-top: 30px;
+}
+
+.btn-page:hover {
+	font-weight: 500;
+}
+
+.btn-page {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	cursor: pointer;
+}
+
+.change-page {
+	text-transform: capitalize;
+}
+
+.number-pages {
+	padding: 3px 5px;
+	border-radius: 4px;
+
+	background: #ddd;
+}
+
+.page-select {
+	font-weight: 600;
+
+	background: #bbb;
+}
