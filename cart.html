@@ -26,10 +26,31 @@
 
 		<h1 id= "title-cart" class= "title-page">carrinho</h1>
 
-		<section id= "product-cart">
+		<section id= "list-product-cart">
+			<div class= "row-product-cart">
+				<input type= "checkbox" class= "check-product-cart checkbox-cart" checked>
 
+				<div class= "product-cart">
+					<div class= "img-product-cart"></div>
+
+					<div id= "info-product-cart">
+						<h2 class= "title-product-cart">nome do produto</h2>
+
+						<p class= "price-product-cart">r$00,00</p>
+
+						<p class= "amount-info-product"><span class= "btn-amount-product">-</span><span class= "amount-product-cart">1</span><span class= "btn-amount-product">+</span> <i class='bx bx-trash'></i></p>
+					</div>
+				</div>
+			</div>
 		</section>
 
+		<aside id= "order-cart">
+			<p id= "check-all-cart-text"><input type= "checkbox" id= "check-all-cart" class= "checkbox-cart"> <label for= "check-all-cart">todos</label></p>
+
+			<p id= "total-price-cart">r$00,00</p>
+
+			<input type= "button" id= "btn-checkout-cart" value= "fazer pedido">
+		</aside>
 	</main>
 </body>
 </html>
