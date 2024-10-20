@@ -2,6 +2,7 @@
 
 /*Arquivos internos*/
 @import url("category.css");
+@import url("product.css");
 
 /*Arquivos externos*/
 /*Fontes importadas: Cairo, Inter, Jockey One, Josefin Sans, Montserrat*/
@@ -18,6 +19,7 @@
 	--escuro4: #4a4a4a;
 	--offwhite: #f2f0ef;
 	--cinzaa: #a1a1a1;
+	--cinza9: #909090;
 	--colorTemp: #d9d9d9;
 }
 
@@ -312,4 +314,4 @@ ul#nav-social {
 
 	text-decoration: none;
 	text-transform: capitalize;
-}
+}              
