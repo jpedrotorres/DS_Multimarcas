@@ -38,7 +38,7 @@
 }
 
 /*Botão para adicionar no carrinho*/
-#add-cart-product {
+.btn-add {
 	display: block;
 
 	font-family: Cairo, sans-serif;
