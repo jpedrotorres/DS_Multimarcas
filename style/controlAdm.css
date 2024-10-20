@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+/*Configurando icone do usuário*/
+#icon-user {
+	grid-column: 3/4;
+	justify-content: right;
+}
+
+/*Estilizando menu hamburguer usuário*/
+#nav-category-adm {
+	display: none;
+}
+
+/*Estilizando cards sobre a operação*/
+#cards-adm-control {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+	row-gap: .7em;
+
+	max-width: 450px;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+.info-adm-control {
+	padding: 10px;
+
+	background: var(--colorTemp);
+}
