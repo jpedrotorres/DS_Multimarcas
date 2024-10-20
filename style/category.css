@@ -2,6 +2,7 @@
 
 /*Alterando botão adicional (voltar) no header*/
 #icon-back {
+	grid-column: 1/2;
 	justify-content: left;
 
 	font-family: Cairo, sans-serif;
