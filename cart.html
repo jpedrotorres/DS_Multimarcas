@@ -9,7 +9,7 @@
 	<link rel= "stylesheet" href= "style/style.css">
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body>
+<body id= "body-cart">
 	<header>
 		<nav class= "nav-header">
 			<p id= "icon-back"><i class='bx bx-chevron-left'></i> voltar</p>
@@ -19,7 +19,7 @@
 			<p id= "icon-cart"><i class='bx bx-cart'></i></p>
 		</nav>
 	</header>
-	<main>
+	<main id= "main-cart">
 		<div class= "path-general">
 			<i class='bx bxs-home'></i> > <span id= "path-child">carrinho</span>
 		</div>
@@ -28,17 +28,17 @@
 
 		<section id= "list-product-cart">
 			<div class= "row-product-cart">
-				<input type= "checkbox" class= "check-product-cart checkbox-cart" checked>
+				<input type= "checkbox" class= "check-product-cart checkbox-cart" checked= "true">
 
 				<div class= "product-cart">
 					<div class= "img-product-cart"></div>
 
-					<div id= "info-product-cart">
+					<div class= "info-product-cart">
 						<h2 class= "title-product-cart">nome do produto</h2>
 
 						<p class= "price-product-cart">r$00,00</p>
 
-						<p class= "amount-info-product"><span class= "btn-amount-product">-</span><span class= "amount-product-cart">1</span><span class= "btn-amount-product">+</span> <i class='bx bx-trash'></i></p>
+						<p class= "amount-info-product"><span class= "btn-amount-product">-</span><span class= "amount-product-cart">1</span><span class= "btn-amount-product">+</span><i class='bx bx-trash'></i></p>
 					</div>
 				</div>
 			</div>
