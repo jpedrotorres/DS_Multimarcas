@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+/*Estilizando informações sobre o produto na página de produtos*/
+#img-carousel-product {
+	width: 240px;
+	height: 300px;
+	margin: auto;
+	margin-bottom: 25px;
+	border-radius: 15px;
+
+	background: var(--colorTemp);
+}
+
+/*Informações*/
+#info-product-page {
+	color: var(--cinza9);
+
+	margin-bottom: 40px;
+
+	text-transform: uppercase;
+}
+
+#category-product-page {
+	font-size: 15px;
+
+	margin-bottom: 15px;
+}
+
+#title-product-page {
+	font-size: 22px;
+
+	margin-bottom: 5px;
+}
+
+#price-product-page {
+	font-size:25px;
+	font-weight: 600;
+}
+
+/*Botão para adicionar no carrinho*/
+#add-cart-product {
+	display: block;
+
+	font-family: Cairo, sans-serif;
+	font-size: 22px;
+	font-weight: 600;
+
+	padding: 10px 20px;
+	margin: auto;
+	border-radius: 50px;
+	border: 2px solid #aaa;
+
+
+	text-transform: capitalize;
+	cursor: pointer;
+}
