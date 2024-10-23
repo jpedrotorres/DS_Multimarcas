@@ -52,7 +52,7 @@ main#main-login {
 	margin: auto;
 }
 
-form > p {
+.form-adm > p {
 	font-size: 13px;
 
 	padding-left: 10px;
@@ -61,7 +61,7 @@ form > p {
 	text-transform: capitalize;
 }
 
-form > p:nth-child(5) {
+.form-adm > p:nth-child(5) {
 	text-align: right;
 
 	margin-top: -5px;
