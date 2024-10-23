@@ -16,6 +16,7 @@ main#main-login {
 /*Estilizando bloco de login*/
 #container-login {
 	width: 100%;
+	max-width: 350px;
 	padding: 10px;
 	border-radius: 15px;
 	box-shadow: 0 4px 8px #0000002f;
