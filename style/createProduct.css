@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+#main-createP {
+	height: calc(100vh - 90px);
+}
+
+/*Estilizando página de criação de produtos*/
+.create-title-page {
+	color: var(--amareloDourado);
+	text-align: center;
+	font-family: Cairo, sans-serif;
+	font-size: 35px;
+	font-weight: 700;
+
+	margin-bottom: 15px;
+
+	text-transform: capitalize;
+}
+
+/*Estilizando formulário*/
+.product-form {
+	max-width: 400px;
+	margin: auto;
+}
+
+#add-img-product {
+	max-width: 340px;
+	min-height: 200px;
+	margin: auto;
+	margin-bottom: 20px;
+	border: 1px solid #0000003f;
+	border-radius: 15px;
+
+	background: var(--colorTemp);
+}
+
+.product-form > p {
+	font-size: 16px;
+	font-weight: 500;
+
+	margin-bottom: 5px;
+
+	text-transform: capitalize;
+}
+
+.input-product-form {
+	max-width: 310px;
+	margin: auto;
+	margin-bottom: 15px;
+	border-bottom: 1px solid black;
+}
+
+.select-product-form {
+	border-bottom: none;
+}
+
+.input-create-product {
+	font-size: 18px;
+	background: initial;
+
+	width: calc(100% - 20px);
+	padding: 3px 10px;
+	border: none;
+}
+
+.input-create-product::placeholder {
+	opacity: 70%;
+	text-transform: capitalize;
+}
+
+.select-create-product {
+	font-size: 17px;
+	background: var(--amareloClaro);
+
+	width: 70%;
+	padding: 5px;
+	border: none;
+	border-radius: 8px;
+}
