@@ -64,7 +64,6 @@ form > p:nth-child(5) {
 	text-align: right;
 
 	margin-top: -5px;
-	margin-bottom: 25px;
 }
 
 #forget-passwd {
@@ -101,11 +100,12 @@ form > p:nth-child(5) {
 	text-transform: capitalize;
 }
 
-#btn-submit-login {
+.btn-submit-form {
 	display: block;
 
 	padding: 5px 20px;
 	margin: auto;
+	margin-top: 25px;
 	border: 1px solid var(--escuro);
 	border-radius: 30px;
 
