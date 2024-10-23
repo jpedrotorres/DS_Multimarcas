@@ -11,6 +11,8 @@
 <body id= "body-createP">
 	<header>
 		<nav class= "nav-header">
+			<p id= "icon-back"><i class='bx bx-chevron-left'></i> voltar</p>
+
 			<a href= "controlAdm.html" id= "logo-header"><img src= "img/logo/logo-ds-mini40.png" alt= "Logo DS Multimarcas"></a>
 
 			<p id= "icon-user"><i class='bx bx-user-circle'></i></p>
@@ -25,7 +27,37 @@
 	</header>
 
 	<main id= "main-createP">
+		<h1>adicionar produto</h1>
 
+		<form id= "create-product-form" class= "product-form" action= "" method= "post">
+			<div id= "add-img-product">
+				<!--aqui deveria ser um input file, porém vai ser um campo para colocar o caminho do arquivo de imagem-->
+			</div>
+
+			<p><label for= "name-create-product">nome do produto</label></p>
+			<div class= "input-product-form">
+				<input type= "text" id= "name-create-product" class= "input-create-product" placeholder= "nome do produto">
+			</div>
+
+			<p><label for= "price-create-product">preço</label></p>
+			<div class= "input-product-form">
+				<input type= "text" id= "price-create-product" class= "input-create-product" placeholder= "valor do produto">
+			</div>
+
+			<p>categoria</p>
+			<div class= "input-product-form">
+				<select id= "category-create-product" class= "select-create-product">
+					<option value= "none">selecione...</option>
+				</select>
+			</div>
+
+			<p><label for= "tag-create-product">tags</label></p>
+			<div class= "input-product-form">
+				<input type= "text" id= "tag-create-product" class= "input-create-product" placeholder= "tags (separadas por vírgula)">
+			</div>
+
+			<input type= "submit" id= "btn-submit-product" class= "btn-submit-form" value= "criar">
+		</form>
 	</main>
 </body>
 </html>
