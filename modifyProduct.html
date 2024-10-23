@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang= "pt-br">
+<head>
+	<meta charset= "utf-8">
+	<meta name= "viewport" content= "width=device-width, initial-scale=1.0">
+
+	<title>Modificar produto | DS Multimarcas</title>
+	<link rel= "stylesheet" href= "style/style.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body id= "body-modifyP">
+	<header>
+		<nav class= "nav-header">
+			<p id= "icon-back"><i class='bx bx-chevron-left'></i> voltar</p>
+
+			<a href= "controlAdm.html" id= "logo-header"><img src= "img/logo/logo-ds-mini40.png" alt= "Logo DS Multimarcas"></a>
+
+			<p id= "icon-user"><i class='bx bx-user-circle'></i></p>
+
+			<ul id= "nav-category-adm">
+				<li><a href= "#" class= "link-user">minha conta</a>
+				<li><a href= "#" class= "link-user">categorias</a>
+				<li><a href= "#" class= "link-user">produtos</a>
+				<li><a href= "#" class= "link-user">sair</a>
+			</ul>
+		</nav>
+	</header>
+
+	<main id= "main-modifyP">
+		<h1 class= "create-title-page">modificar produto</h1>
+
+		<form id= "modify-product-form" class= "product-form" action= "" method= "post">
+
+			<!--Aqui o placeholder será as informações reais do produto-->
+			<div id= "add-img-product">
+				<!--aqui deveria mostrar as imagens do produto-->
+			</div>
+
+			<p><label for= "name-create-product">nome do produto</label></p>
+			<div class= "input-product-form">
+				<input type= "text" id= "name-create-product" class= "input-create-product" placeholder= "nome do produto">
+			</div>
+
+			<p><label for= "price-create-product">preço</label></p>
+			<div class= "input-product-form">
+				<input type= "text" id= "price-create-product" class= "input-create-product" placeholder= "valor do produto">
+			</div>
+
+			<p>categoria</p>
+			<div class= "select-product-form input-product-form">
+				<select id= "category-create-product" class= "select-create-product">
+					<option value= "none">atual</option>
+				</select>
+			</div>
+
+			<p><label for= "tag-create-product">tags</label></p>
+			<div class= "input-product-form">
+				<input type= "text" id= "tag-create-product" class= "input-create-product" placeholder= "tags (separadas por vírgula)">
+			</div>
+
+			<input type= "submit" id= "btn-submit-product" class= "btn-submit-form" value= "editar">
+		</form>
+	</main>
+</body>
+</html>
