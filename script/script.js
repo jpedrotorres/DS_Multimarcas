@@ -26,31 +26,31 @@ function openMenu() {
 
 function getProducts() {
 	const products= [
-		new Cproduct("camisa flamengo 2024", 100.00, "camisas", "./img/products/camisas/camisa-flamengo2024", ["new", "favorite"]),
-		new Cproduct("camisa Al-Hilal", 125.00, "camisas", "./img/products/camisas/", []),
-		new Cproduct("camisa fluminense 2023", 100.00, "camisas", "./img/products/camisas/", ["favorite"]),
-		new Cproduct("camisa vasco 2023", 100.00, "camisas", "./img/products/camisas/", ["favorite"]),
-		new Cproduct("camisa botafogo 2024", 100.00, "camisas", "./img/products/camisas/", []),
-		new Cproduct("camisa seleção brasileira 2024", 125.00, "camisas", "./img/products/camisas/", []),
-		new Cproduct("camisa seleção japão animes", 150.00, "camisas", "./img/products/camisas/", ["new"]),
-		new Cproduct("diesel 5 bar", 175.00, "relógios", "./img/products/relogios/", ["new"]),
-		new Cproduct("armani funcional", 199.00, "relógios", "./img/products/relogios/", [""]),
-		new Cproduct("invicta venom hybrid", 300.00, "relógios", "./img/products/relogios/", ["new"]),
-		new Cproduct("invicta tria magnum", 700.00, "relógios", "./img/products/relogios/", [""]),
-		new Cproduct("bota jordan chicago prime", 185.00, "tênis", "./img/products/tenis/", [""]),
-		new Cproduct("tênis nike dunk infantil", 150.00, "tênis", "./img/products/tenis/", ["favorite"]),
-		new Cproduct("adidas falcon run", 160.00, "tênis", "./img/products/tenis/", [""]),
-		new Cproduct("mizuno creation 22", 145.00, "tênis", "./img/products/tenis/", [""]),
-		new Cproduct("earpods usb-c", 20.00, "eletrônicos", "./img/products/eletronicos/", ["favorite"]),
-		new Cproduct("aspirador portátil usb", 30.00, "eletrônicos", "./img/products/eletronicos/", [""]),
-		new Cproduct("carregador iphone 15", 30.00, "eletrônicos", "./img/products/eletronicos/", ["new"]),
-		new Cproduct("scooter elétrica 2024", 8200.00, "eletrônicos", "./img/products/eletronicos/", [""]),
-		new Cproduct("fone bluetooth", 20.00, "eletrônicos", "./img/products/eletronicos/", ["new"]),
-		new Cproduct("caneca térmica stanley", 85.00, "copos", "./img/products/copos/", [""]),
-		new Cproduct("copo térmico stanley", 50.00, "copos", "./img/products/copos/", ["favorite"]),
-		new Cproduct("garrafa térmica", 25.00, "copos", "./img/products/copos/", [""]),
-		new Cproduct("212 men 100ml", 70.00, "perfumes", "./img/products/perfumes/", [""]),
-		new Cproduct("ferrari black 100ml", 65.00, "perfumes", "./img/products/perfumes/", [""])
+		new Cproduct("camisa flamengo 2024", 100.00, "camisas", "./img/products/camisas/camisa-flamengo2024/", ["new", "favorite"]),
+		new Cproduct("camisa Al-Hilal", 125.00, "camisas", "./img/products/camisas/camisa-alhilal/", []),
+		new Cproduct("camisa fluminense 2023", 100.00, "camisas", "./img/products/camisas/camisa-fluminense2023/", ["favorite"]),
+		new Cproduct("camisa vasco 2023", 100.00, "camisas", "./img/products/camisas/camisa-vasco2023/", ["favorite"]),
+		new Cproduct("camisa botafogo 2024", 100.00, "camisas", "./img/products/camisas/camisa-botafogo2024/", []),
+		new Cproduct("camisa seleção brasileira 2024", 125.00, "camisas", "./img/products/camisas/camisa-selecao-brasil2024/", []),
+		new Cproduct("camisa seleção japão animes", 150.00, "camisas", "./img/products/camisas/camisa-selecao-japao-anime/", ["new"]),
+		new Cproduct("diesel 5 bar", 175.00, "relógios", "./img/products/relogios/diesel-5bar/", ["new"]),
+		new Cproduct("armani funcional", 199.00, "relógios", "./img/products/relogios/armani-funcional/", [""]),
+		new Cproduct("invicta venom hybrid", 300.00, "relógios", "./img/products/relogios/invicta-venom-hybrid/", ["new"]),
+		new Cproduct("invicta tria magnum", 700.00, "relógios", "./img/products/relogios/invicta-tria-magnum/", [""]),
+		new Cproduct("bota jordan chicago prime", 185.00, "tênis", "./img/products/tenis/bora-jordan-chicago-prime/", [""]),
+		new Cproduct("tênis nike dunk infantil", 150.00, "tênis", "./img/products/tenis/nike-dunk-infantil/", ["favorite"]),
+		new Cproduct("adidas falcon run", 160.00, "tênis", "./img/products/tenis/adidas-falcon-run/", [""]),
+		new Cproduct("mizuno creation 22", 145.00, "tênis", "./img/products/tenis/mizuno-creation22/", [""]),
+		new Cproduct("earpods usb-c", 20.00, "eletrônicos", "./img/products/eletronicos/earpods-usbc/", ["favorite"]),
+		new Cproduct("aspirador portátil usb", 30.00, "eletrônicos", "./img/products/eletronicos/aspirador-portatil-usb/", [""]),
+		new Cproduct("carregador iphone 15", 30.00, "eletrônicos", "./img/products/eletronicos/carregador-iphone15/", ["new"]),
+		new Cproduct("scooter elétrica 2024", 8200.00, "eletrônicos", "./img/products/eletronicos/scooter-eletrica/", [""]),
+		new Cproduct("fone bluetooth", 20.00, "eletrônicos", "./img/products/eletronicos/fone-bluetooth/", ["new"]),
+		new Cproduct("caneca térmica stanley", 85.00, "copos", "./img/products/copos/caneca-stanley/", [""]),
+		new Cproduct("copo térmico stanley", 50.00, "copos", "./img/products/copos/copo-stanley/", ["favorite"]),
+		new Cproduct("garrafa térmica", 25.00, "copos", "./img/products/copos/garrafa-termica/", [""]),
+		new Cproduct("212 men 100ml", 70.00, "perfumes", "./img/products/perfumes/212-men/", [""]),
+		new Cproduct("ferrari black 100ml", 65.00, "perfumes", "./img/products/perfumes/ferrari-black/", [""])
 	]
 
 	return products
@@ -112,18 +112,22 @@ function fillProductHome(listProduct, type) {
 
 			productCard.classList.add("product-card")
 
-			productCard.innerHTML= `<div class= "product-img-card"></div>
+			productCard.innerHTML= `<div class= "product-img-card">
+						<img loading= "lazy" class= "img-inside-card-product"/>
+					</div>
 					<div class= "info-product-card">
 						<p class= "category-product-card">${product.category}</p>
 						<h3 class= "title-product-card">${product.name}</h3>
 						<p class= "price-product-card">r$${product.price}</p>
 					</div>`
 
+			const imgInside= productCard.querySelector(".img-inside-card-product")
+
+			imgInside.src= `${product.image}/icon.jpg` 
+			imgInside.alt= `Imagem do produto: ${product.name}`
+
 			productShop.appendChild(productCard);
 		})
-
-	console.log(teste)
-	console.log(listProduct[0].tag.includes(typeList[type]))
 }
 
 fillProductHome(getProducts(), "news-product")
