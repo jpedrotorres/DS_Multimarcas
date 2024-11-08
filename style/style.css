@@ -79,6 +79,9 @@ header {
 #icon-cart {
 	grid-column: 3/4;
 	justify-content: right;
+
+	color: inherit;
+	text-decoration: none;
 }
 
 .nav-header > #menu-category {
