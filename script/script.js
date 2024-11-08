@@ -98,7 +98,7 @@ function fillSpeedAcess(listCategory) {
 }
 
 function fillProductHome(listProduct, type) {
-	const productHome= document.querySelector(".product-home")
+	const productHome= document.querySelector(`#${type}`)
 	const productShop= productHome.querySelector(".group-shop")
 
 	const typeList= {
@@ -123,9 +123,11 @@ function fillProductHome(listProduct, type) {
 		})
 
 	console.log(teste)
+	console.log(listProduct[0].tag.includes(typeList[type]))
 }
 
 fillProductHome(getProducts(), "news-product")
+fillProductHome(getProducts(), "favorite-product")
 fillSpeedAcess(getCategories())
 fillCategoryMenu(getCategories())
 document.querySelector("#icon-burguer").onclick= openMenu
