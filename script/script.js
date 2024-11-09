@@ -123,7 +123,7 @@ function fillProductHome(listProduct, type) {
 
 			const imgInside= productCard.querySelector(".img-inside-card-product")
 
-			imgInside.src= `${product.image}/icon.jpg` 
+			imgInside.src= `${product.image}/icon.webp` 
 			imgInside.alt= `Imagem do produto: ${product.name}`
 
 			productShop.appendChild(productCard);

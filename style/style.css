@@ -226,6 +226,14 @@ aside .name-access {
 	border-radius: 10px;
 
 	background: var(--colorTemp);
+
+	overflow: hidden;
+}
+
+.img-inside-card-product {
+	width: 100%;
+	height: 100%;
+
 }
 
 .info-product-card {
