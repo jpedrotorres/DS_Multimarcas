@@ -41,17 +41,24 @@
 		grid-column: 1/2;
 		grid-row: 2/3;
 
-		width: 300px;
+		width: 290px;
 		height: 350px;
+		margin: 0 auto;
 	}
 }
 
 @media screen and (min-width: 992px) {
-	
+	#img-carousel-product {
+		width: 390px;
+		height: 430px;
+	}
 }
 
 @media screen and (min-width: 1280px) {
-	
+	#img-carousel-product {
+		width: 450px;
+		height: 480px;
+	}
 }
 
 /*Informações*/
