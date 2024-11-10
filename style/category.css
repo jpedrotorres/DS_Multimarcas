@@ -161,16 +161,13 @@ main {
 }
 
 /*Estilizando a lista de produtos*/
-#product-group-category {
-}
-
 .product-category {
 	display: flex;
 }
 
 .img-product-category {
-	width: 100px;
-	height: 100px;
+	width: 90px;
+	height: 90px;
 	border-radius: 5px;
 
 	background: var(--colorTemp);
@@ -178,14 +175,14 @@ main {
 
 .info-product-category {
 	max-width: 200px;
-	margin-left: 15px;
+	margin-left: 10px;
 	margin-top: 5px;
 
 	text-transform: capitalize;
 }
 
 .title-product-category {
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: 600;
 
 	margin-bottom: 10px;
@@ -193,6 +190,101 @@ main {
 
 .price-product-category {
 	font-size: 18px;
+}
+
+@media screen and (min-width: 580px) {
+	#product-group-category {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.img-product-category {
+		width: 100px;
+		height: 100px;
+	}
+
+	.info-product-category {
+		max-width: 250px;
+		margin-left: 15px;
+	}
+
+	.title-product-category {
+		font-size: 15px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#product-group-category {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	.img-product-category {
+		width: 130px;
+		height: 130px;
+	}
+
+	.info-product-category {
+		max-width: 350px;
+	}
+
+	.title-product-category {
+		font-size: 18px;
+	}
+
+	.price-product-category {
+		font-size: 20px;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	#product-group-category {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	.img-product-category {
+		width: 150px;
+		height: 150px;
+	}
+
+	.info-product-category {
+		max-width: 450px;
+		margin-left: 20px;
+	}
+
+	.title-product-category {
+		font-size: 20px;
+	}
+
+	.price-product-category {
+		font-size: 22px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	#product-group-category {
+		padding-left: max(50px, 15%);
+		padding-right: max(50px, 15%);
+	}
+
+	.img-product-category {
+		width: 180px;
+		height: 180px;
+	}
+
+	.info-product-category {
+		max-width: 500px;
+		margin-left: 25px;
+	}
+
+	.title-product-category {
+		font-size: 22px;
+	}
+
+	.price-product-category {
+		font-size: 24px;
+	}
 }
 
 /*Estilizando botões para as páginas de produtos*/
@@ -232,4 +324,22 @@ main {
 	font-weight: 600;
 
 	background: #bbb;
+}
+
+@media screen and (min-width: 768px) {
+	.btn-page {
+		font-size: 18px;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.btn-page {
+		font-size: 20px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.btn-page {
+		font-size: 22px;
+	}
 }
