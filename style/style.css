@@ -288,6 +288,26 @@ main {
 	transform: translate(-50%);
 }
 
+@media screen and (min-width: 580px) {
+	#main-carousel {
+		max-width: 600px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#main-carousel {
+		max-width: 850px;
+		height: 220px;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	#main-carousel {
+		max-width: 1000px;
+		height: 260px;
+	}
+}
+
 /*Estilizando o atalho das categorias*/
 .speed-access {
 	display: flex;
@@ -333,6 +353,22 @@ aside .name-access {
 	font-size: 15px;
 
 	text-transform: capitalize;
+}
+
+@media screen and (min-width: 580px) {
+	
+}
+
+@media screen and (min-width: 768px) {
+	
+}
+
+@media screen and (min-width: 992px) {
+	
+}
+
+@media screen and (min-width: 1280px) {
+	
 }
 
 /*Estilizando section com os produtos*/
