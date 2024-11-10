@@ -267,10 +267,16 @@ main {
 	z-index: 1;
 	cursor: pointer;
 
+	color: #fff;
 	font-size: 20px;
 	font-weight: 500;
+	background: var(--escuro4);
 
+	width: 20px;
+	height: 20px;
 	margin: 0 10px;
+	border: none;
+	border-radius: 50%;
 }
 
 .btn-main-carousel:nth-child(2) {
