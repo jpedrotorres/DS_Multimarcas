@@ -276,34 +276,44 @@ function getEspecialURL() {
 
 	requests.forEach(request=> {
 			let query= request.split("=")
+			let queryOBJ= {}
 			console.log(query)
 
-			queries.push({query[0] : query[1]})
-		})
+			queryOBJ[query[0]]= query[1]
 
+			queries.push(queryOBJ)
+		})
 	return queries
 }
 
 function setPageCategory() {
 	let query= getEspecialURL()
 
-	let category= query.filter(element=> {"category" in element})
-				.map(element=> element.values())
+	let category= Object.values(query[0])
 
+	console.log(category)
 	fillCategoryPage(category, getProductofCategory(category, getProducts()))
 }
 
-setPageCategory()
-
-document.querySelector("#title-category").addEventListener("click", event=> setQueryURL("camisas"))
-
-fillProductHome(getProducts(), "news-product")
-fillProductHome(getProducts(), "favorite-product")
-fillSpeedAcess(getCategories())
-fillCategoryMenu(getCategories())
-document.querySelector("#menu-category").onclick= openMenuDp
-//document.querySelector("#menu-category").addEventListener("mouseenter", openMenuDp)
-document.querySelector("#icon-burguer").onclick= openMenu
-
 var positionActual= 0
-document.addEventListener('DOMContentLoaded', autoSlider)
+
+document.addEventListener('DOMContentLoaded', event=> {
+	if(window.location.href.includes("category.html")) {
+		setPageCategory()
+
+		document.querySelector("#title-category").addEventListener("click", event=> setQueryURL("camisas", "carros"))
+	}
+})
+
+document.addEventListener('DOMContentLoaded', event=> {
+	if(window.location.href.includes("index.html")) {
+		fillProductHome(getProducts(), "news-product")
+		fillProductHome(getProducts(), "favorite-product")
+		fillSpeedAcess(getCategories())
+		fillCategoryMenu(getCategories())
+		document.querySelector("#menu-category").onclick= openMenuDp
+		document.querySelector("#menu-category").addEventListener("mouseenter", openMenuDp)
+		document.querySelector("#icon-burguer").onclick= openMenu
+		autoSlider()
+	}
+})
