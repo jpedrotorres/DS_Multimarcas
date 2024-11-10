@@ -300,7 +300,49 @@ function setPageCategory() {
 	fillCategoryPage(category, getProductofCategory(category, getProducts()))
 }
 
+function fillProductPage(product) {
+	const main= document.querySelector("#main-product")
+	const imgProduct= main.querySelector("#img-inside-product-carousel")
+	const infoProduct= main.querySelector("#info-product-page")
+	const categoryP= infoProduct.querySelector("#category-product-page")
+	const nameP= infoProduct.querySelector("#title-product-page")
+	const priceP= infoProduct.querySelector("#price-product-page")
+
+	console.log(product)
+
+	document.title = `${product.name} | DS Multimarcas`
+
+	changePathGeneral(product.category, product.name)
+
+	imgProduct.src= `${product.image}image.webp`
+	imgProduct.alt= `Imagem para o produto ${product.name}`
+
+	categoryP.innerHTML= `${product.category}`
+	nameP.innerHTML= `${product.name}`
+	priceP.innerHTML= `r$${product.price.toFixed(2)}`
+}
+
+function getOBJById(id, listOBJ) {
+	return listOBJ.filter(element=> element.id == id)
+}
+
+function setPageProduct() {
+	let query= getEspecialURL()
+
+	let idProduct= Object.values(query[1])
+	console.log(idProduct)
+
+	let product= getOBJById(idProduct, getProducts())
+	console.log(product)
+	fillProductPage(product[0])
+}
+
+function clickSpeedAcess() {
+	const btnAcess= document.querySelectorAll(".access-button")	
+}
+
 var positionActual= 0
+
 
 document.addEventListener('DOMContentLoaded', event=> {
 	if(window.location.href.includes("category.html")) {
@@ -308,9 +350,12 @@ document.addEventListener('DOMContentLoaded', event=> {
 	}
 })
 
-function clickProduct(e) {
-	e
-}
+document.addEventListener('DOMContentLoaded', event=> {
+	if(window.location.href.includes("product.html")) {
+		setPageProduct()
+	}
+})
+
 
 document.addEventListener('DOMContentLoaded', event=> {
 	if(window.location.href.includes("index.html")) {
