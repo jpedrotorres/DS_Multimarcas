@@ -17,23 +17,35 @@ main {
 	min-height: calc(100vh - 90px - 397px);
 }
 
-@media screen and (min-width: 580px) {
-	
-}
-
 @media screen and (min-width: 768px) {
 	#icon-back {
 		grid-column: 2/3;
 		grid-row: 1/2;
+		justify-content: end;
+	}
+
+	main {
+		/*90px- Padding top main; 359px- height footer*/
+		min-height: calc(100vh - 90px - 359px);
 	}
 }
 
 @media screen and (min-width: 992px) {
-	
+	#icon-back {
+		display: none;
+	}
+
+	main {
+		/*110px- Padding top main; 221px- height footer*/
+		min-height: calc(100vh - 110px - 221px);
+	}
 }
 
 @media screen and (min-width: 1280px) {
-	
+	main {
+		/*130px- Padding top main; 221px- height footer*/
+		min-height: calc(100vh - 130px - 221px);
+	}
 }
 
 /*Estilizando informativo do caminho*/
