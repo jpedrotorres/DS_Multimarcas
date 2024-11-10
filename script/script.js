@@ -40,19 +40,19 @@ function getProducts() {
 		new Cproduct("camisa botafogo 2024", 100.00, "camisas", "./img/products/camisas/camisa-botafogo2024/", []),
 		new Cproduct("camisa seleção brasileira 2024", 125.00, "camisas", "./img/products/camisas/camisa-selecao-brasil2024/", []),
 		new Cproduct("camisa seleção japão animes", 150.00, "camisas", "./img/products/camisas/camisa-selecao-japao-anime/", ["new"]),
-		new Cproduct("diesel 5 bar", 175.00, "relógios", "./img/products/relogios/diesel-5bar/", ["new"]),
-		new Cproduct("armani funcional", 199.00, "relógios", "./img/products/relogios/armani-funcional/", [""]),
-		new Cproduct("invicta venom hybrid", 300.00, "relógios", "./img/products/relogios/invicta-venom-hybrid/", ["new"]),
-		new Cproduct("invicta tria magnum", 700.00, "relógios", "./img/products/relogios/invicta-tria-magnum/", [""]),
-		new Cproduct("bota jordan chicago prime", 185.00, "tênis", "./img/products/tenis/bora-jordan-chicago-prime/", [""]),
-		new Cproduct("tênis nike dunk infantil", 150.00, "tênis", "./img/products/tenis/nike-dunk-infantil/", ["favorite"]),
-		new Cproduct("adidas falcon run", 160.00, "tênis", "./img/products/tenis/adidas-falcon-run/", [""]),
-		new Cproduct("mizuno creation 22", 145.00, "tênis", "./img/products/tenis/mizuno-creation22/", [""]),
-		new Cproduct("earpods usb-c", 20.00, "eletrônicos", "./img/products/eletronicos/earpods-usbc/", ["favorite"]),
-		new Cproduct("aspirador portátil usb", 30.00, "eletrônicos", "./img/products/eletronicos/aspirador-portatil-usb/", [""]),
-		new Cproduct("carregador iphone 15", 30.00, "eletrônicos", "./img/products/eletronicos/carregador-iphone15/", ["new"]),
-		new Cproduct("scooter elétrica 2024", 8200.00, "eletrônicos", "./img/products/eletronicos/scooter-eletrica/", [""]),
-		new Cproduct("fone bluetooth", 20.00, "eletrônicos", "./img/products/eletronicos/fone-bluetooth/", ["new"]),
+		new Cproduct("diesel 5 bar", 175.00, "relogios", "./img/products/relogios/diesel-5bar/", ["new"]),
+		new Cproduct("armani funcional", 199.00, "relogios", "./img/products/relogios/armani-funcional/", [""]),
+		new Cproduct("invicta venom hybrid", 300.00, "relogios", "./img/products/relogios/invicta-venom-hybrid/", ["new"]),
+		new Cproduct("invicta tria magnum", 700.00, "relogios", "./img/products/relogios/invicta-tria-magnum/", [""]),
+		new Cproduct("bota jordan chicago prime", 185.00, "tenis", "./img/products/tenis/bora-jordan-chicago-prime/", [""]),
+		new Cproduct("tênis nike dunk infantil", 150.00, "tenis", "./img/products/tenis/nike-dunk-infantil/", ["favorite"]),
+		new Cproduct("adidas falcon run", 160.00, "tenis", "./img/products/tenis/adidas-falcon-run/", [""]),
+		new Cproduct("mizuno creation 22", 145.00, "tenis", "./img/products/tenis/mizuno-creation22/", [""]),
+		new Cproduct("earpods usb-c", 20.00, "eletronicos", "./img/products/eletronicos/earpods-usbc/", ["favorite"]),
+		new Cproduct("aspirador portátil usb", 30.00, "eletronicos", "./img/products/eletronicos/aspirador-portatil-usb/", [""]),
+		new Cproduct("carregador iphone 15", 30.00, "eletronicos", "./img/products/eletronicos/carregador-iphone15/", ["new"]),
+		new Cproduct("scooter elétrica 2024", 8200.00, "eletronicos", "./img/products/eletronicos/scooter-eletrica/", [""]),
+		new Cproduct("fone bluetooth", 20.00, "eletronicos", "./img/products/eletronicos/fone-bluetooth/", ["new"]),
 		new Cproduct("caneca térmica stanley", 85.00, "copos", "./img/products/copos/caneca-stanley/", [""]),
 		new Cproduct("copo térmico stanley", 50.00, "copos", "./img/products/copos/copo-stanley/", ["favorite"]),
 		new Cproduct("garrafa térmica", 25.00, "copos", "./img/products/copos/garrafa-termica/", [""]),
@@ -66,9 +66,9 @@ function getProducts() {
 function getCategories() {
 	const category= [
 		new Ccategory("camisas", "<i class='bx bxs-t-shirt'></i>", true),
-		new Ccategory("relógios", "<i class='bx bxs-watch'></i>", true),
-		new Ccategory("tênis", "<i class='bx bx-closet'></i>", true),
-		new Ccategory("eletrônicos", "<i class='bx bx-devices'></i>", true),
+		new Ccategory("relogios", "<i class='bx bxs-watch'></i>", true),
+		new Ccategory("tenis", "<i class='bx bx-closet'></i>", true),
+		new Ccategory("eletronicos", "<i class='bx bx-devices'></i>", true),
 		new Ccategory("copos", "<i class='bx bx-coffee-togo'></i>", false),
 		new Ccategory("perfumes", "<i class='bx bx-spray-can'></i>", false)
 	]
@@ -83,6 +83,8 @@ function fillCategoryMenu(listCategory) {
 		const li= document.createElement("li")
 
 		li.innerHTML= `<a href= "category.html" class= "link-category">${category.name}</a>`
+
+		li.querySelector(".link-category").href= `category.html?category=${category.name}`
 
 		navCategory.appendChild(li)
 	})
@@ -214,6 +216,8 @@ function fillCategoryPage(category, listProduct) {
 	let amtProduct= listProduct.length
 	let positionActual= 0
 	let pages= []
+
+	document.title = `${category} | DS Multimarcas`
 
 	changePathGeneral(category)
 	changeH1Page(category)
