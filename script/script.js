@@ -24,6 +24,13 @@ function openMenu() {
 	else menuH.style.display= "block"
 }
 
+function openMenuDp() {
+	const listDp= document.querySelector("#nav-category")
+
+	if(listDp.style.display== "block") listDp.style.display= "none"
+	else listDp.style.display= "block"
+}
+
 function getProducts() {
 	const products= [
 		new Cproduct("camisa flamengo 2024", 100.00, "camisas", "./img/products/camisas/camisa-flamengo2024/", ["new", "favorite"]),
@@ -134,5 +141,8 @@ fillProductHome(getProducts(), "news-product")
 fillProductHome(getProducts(), "favorite-product")
 fillSpeedAcess(getCategories())
 fillCategoryMenu(getCategories())
+document.querySelector("#menu-category").onclick= openMenuDp
+document.querySelector("#menu-category").addEventListener("mouseenter", openMenuDp)
+
 document.querySelector("#icon-burguer").onclick= openMenu
 
