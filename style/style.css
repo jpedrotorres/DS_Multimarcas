@@ -208,7 +208,7 @@ header {
 	}
 
 	#logo-header > img {
-		height: 60px;
+		height: 55px;
 	}
 
 	#title-menu {
@@ -474,20 +474,82 @@ main {
 	font-size: 14px;
 }
 
-@media screen and (min-width: 580px) {
-	
-}
-
 @media screen and (min-width: 768px) {
-	
+	.product-home {
+		max-width: 800px;
+	}
+
+	.title-group {
+		font-size: 35px;
+	}
+
+	.group-shop {
+		gap: 1.5em 2em;
+	}
+
+	.product-card {
+		width: 200px;
+	}
+
+	.product-img-card {
+		height: 220px;
+	}
+
+	.category-product-card {
+		font-size: 15px;
+	}
+
+	.title-product-card {
+		font-size: 19px;
+	}
+
+	.price-product-card {
+		font-size: 17px;
+	}
 }
 
 @media screen and (min-width: 992px) {
-	
+	.title-group {
+		font-size: 40px;
+	}
+
+	.product-card {
+		width: 210px;
+	}
+
+	.product-img-card {
+		height: 240px;
+	}
 }
 
 @media screen and (min-width: 1280px) {
-	
+	.product-home {
+		max-width: 1000px;
+	}
+
+	.group-shop {
+		gap: 1.7em 2.2em;
+	}
+
+	.product-card {
+		width: 230px;
+	}
+
+	.product-img-card {
+		height: 270px;
+	}
+
+	.category-product-card {
+		font-size: 17px;
+	}
+
+	.title-product-card {
+		font-size: 21px;
+	}
+
+	.price-product-card {
+		font-size: 19px;
+	}
 }
 
 /*Estilizando carrossel de relacionados*/
