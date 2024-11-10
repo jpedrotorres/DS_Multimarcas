@@ -321,7 +321,7 @@ main {
 	margin-bottom: 30px;
 }
 
-aside .access-button {
+.access-button {
 	display: flex;
 	flex-flow: column wrap;
 	align-items: center;
@@ -333,7 +333,7 @@ aside .access-button {
 	cursor: pointer;
 }
 
-aside .access-icon {
+.access-icon {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -347,7 +347,7 @@ aside .access-icon {
 	background: var(--escuro);
 }
 
-aside .name-access {
+.name-access {
 	font-family: Inter, sans-serif;
 	font-weight: 600;
 	font-size: 15px;
@@ -355,20 +355,48 @@ aside .name-access {
 	text-transform: capitalize;
 }
 
-@media screen and (min-width: 580px) {
-	
-}
-
 @media screen and (min-width: 768px) {
-	
-}
+	.speed-access {
+		max-width: 450px;
+	}
 
-@media screen and (min-width: 992px) {
-	
+	.access-button {
+		height: 100px;
+		max-width: 100px;
+	}
+
+	.access-icon {
+		height: 65px;
+		width: 65px;
+
+		font-size: 27px;
+	}
+
+	.name-access {
+		font-size: 18px;
+	}
 }
 
 @media screen and (min-width: 1280px) {
-	
+	.speed-access {
+		max-width: 500px;
+	}
+
+	.access-button {
+		height: 110px;
+		max-width: 115px;
+	}
+
+	.access-icon {
+		height: 75px;
+		width: 75px;
+
+		font-size: 31px;
+	}
+
+	.name-access {
+		font-size: 20px;
+	}
 }
 
 /*Estilizando section com os produtos*/
@@ -444,6 +472,22 @@ aside .name-access {
 
 .price-product-card {
 	font-size: 14px;
+}
+
+@media screen and (min-width: 580px) {
+	
+}
+
+@media screen and (min-width: 768px) {
+	
+}
+
+@media screen and (min-width: 992px) {
+	
+}
+
+@media screen and (min-width: 1280px) {
+	
 }
 
 /*Estilizando carrossel de relacionados*/
