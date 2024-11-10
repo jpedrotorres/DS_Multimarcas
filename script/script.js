@@ -172,7 +172,7 @@ function changePathGeneral(category, product= "") {
 
 	let pathChild= `${category}`
 
-	if(product!= "") pathChild.concat(` > ${product}`)
+	if(product!= "") pathChild= pathChild.concat(` > ${product}`)
 
 	pathActual.innerText= pathChild
 }
@@ -257,7 +257,45 @@ function fillCategoryPage(category, listProduct) {
 	}))
 }
 
-fillCategoryPage("camisas", getProductofCategory("camisas", getProducts()))
+function setQueryURL(category, product= "") {
+	const urlActual= window.location.href
+
+	let urlCategory= urlActual + `?category=${category}`
+	if(product!= "")urlCategory += `&product=${product}`
+
+	window.open(urlCategory, target= "_self")
+}
+
+function getEspecialURL() {
+	const url= window.location.href
+	let queries= []
+
+	let urlActual= url.split("?")
+
+	let requests= urlActual[1].split("&")
+
+	requests.forEach(request=> {
+			let query= request.split("=")
+			console.log(query)
+
+			queries.push({query[0] : query[1]})
+		})
+
+	return queries
+}
+
+function setPageCategory() {
+	let query= getEspecialURL()
+
+	let category= query.filter(element=> {"category" in element})
+				.map(element=> element.values())
+
+	fillCategoryPage(category, getProductofCategory(category, getProducts()))
+}
+
+setPageCategory()
+
+document.querySelector("#title-category").addEventListener("click", event=> setQueryURL("camisas"))
 
 fillProductHome(getProducts(), "news-product")
 fillProductHome(getProducts(), "favorite-product")
