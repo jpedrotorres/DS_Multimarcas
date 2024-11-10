@@ -38,6 +38,7 @@ body {
 
 header {
 	position: fixed;
+	z-index: 2;
 
 	width: calc(100vw - 80px);
 	padding: 15px 40px;
@@ -84,7 +85,7 @@ header {
 	text-decoration: none;
 }
 
-.nav-header > #menu-category {
+#menu-category {
 	grid-column: 1/4;
 	display: none;
 
@@ -124,8 +125,123 @@ header {
 	text-decoration: none;
 }
 
+@media screen and (min-width: 580px) {
+	header {
+		width: calc(100vw - 200px);
+		padding: 15px 100px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#icon-burguer {display: none}
+
+	.nav-header {
+		grid-template-columns: 65% 25% 10%;
+	}
+
+	#logo-header {
+		grid-column: 1/2;
+		justify-content: initial;
+	}
+
+	#menu-category {
+		grid-column: 2/3;
+		grid-row: 1/2;
+		display: flex;
+		flex-direction: column;
+		justify-content: end;
+
+		position: relative;
+	}
+
+	#title-menu {
+		font-size: 20px;
+
+		margin: 0;
+	}
+
+	#nav-category {
+		display: none;
+
+		position: absolute;
+		top: 40px;
+		left: 5px;
+
+		background: var(--escuro);
+
+		padding-right: 15px;
+	}
+
+	#nav-category > li:hover {
+		border-bottom: 2px solid var(--escuro3);
+	}
+}
+
+@media screen and (min-width: 992px) {
+	header {
+		width: calc(100vw - 240px);
+		padding: 20px 120px;
+	}
+
+	.nav-header {
+		font-size: 40px;
+	}
+
+	#logo-header > img {
+		height: 50px;
+	}
+
+	#nav-category {
+		left: 15%;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	header {
+		width: calc(100vw - 300px);
+		padding: 25px 150px;
+	}
+
+	.nav-header {
+		grid-template-columns: 65% 30% 5%;
+		font-size: 50px;
+	}
+
+	#logo-header > img {
+		height: 60px;
+	}
+
+	#title-menu {
+		font-size: 22px;
+
+		margin: 0;
+	}
+
+	#nav-category {
+		left: 25%;
+	}
+}
+
 main {
 	padding: 90px 40px 0;
+}
+
+@media screen and (min-width: 768px) {
+	main {
+		padding: 90px 60px 0;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	main {
+		padding-top: 110px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	main {
+		padding: 130px 80px 0;
+	}
 }
 
 /*Estilizando o carrossel da home*/
@@ -138,6 +254,38 @@ main {
 	border-radius: 30px;
 
 	background: var(--colorTemp);
+
+	overflow: hidden;
+	position: relative;
+	z-index: 0;
+}
+
+.btn-main-carousel {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 1;
+	cursor: pointer;
+
+	font-size: 20px;
+	font-weight: 500;
+
+	margin: 0 10px;
+}
+
+.btn-main-carousel:nth-child(2) {
+	right: 0;
+}
+
+.item-main-carousel {
+	display: none;
+	position: absolute;
+}
+
+.item-checked-carousel {
+	display: block;
+	left: 50%;
+	transform: translate(-50%);
 }
 
 /*Estilizando o atalho das categorias*/
@@ -223,6 +371,7 @@ aside .name-access {
 .product-img-card {
 	height: 160px;
 	margin-bottom: 10px;
+	border: 1px solid #0000000f;
 	border-radius: 10px;
 
 	background: var(--colorTemp);
@@ -262,6 +411,65 @@ aside .name-access {
 }
 
 /*Estilizando carrossel de relacionados*/
+#know-card {
+	margin-bottom: 25px;
+}
+
+.cards-carousel {
+	display: flex;
+	gap: 10px;
+
+	height: 300px;
+
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+}
+
+.card-inside-carousel {
+	flex: 0 0 min(260px, 100%);
+
+	width: 150px;
+	border-radius: 20px 20px 0 0;
+
+	background: var(--colorTemp);
+
+	scroll-snap-align: center;
+	overflow: hidden;
+}
+
+.img-card-carousel {
+	height: 150px;
+
+	position: relative;
+	overflow: hidden;
+}
+
+.img-card-carousel > img {
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+
+	height: 100%;
+	width: 100%;
+}
+
+.info-card-carousel {
+	padding: 10px;
+}
+
+.text-card-carousel {
+	font-size: 13px;
+	text-transform: capitalize;
+
+	margin-bottom: 10px;
+}
+
+.btn-card-carousel {
+	font-size: 12px;
+
+	margin-bottom: 0;
+}
 
 /*Estilizando footer*/
 footer {
@@ -342,4 +550,20 @@ ul#nav-social {
 
 	text-decoration: none;
 	text-transform: capitalize;
-}              
+}
+
+@media screen and (min-width: 580px) {
+	
+}
+
+@media screen and (min-width: 768px) {
+	
+}
+
+@media screen and (min-width: 992px) {
+	
+}
+
+@media screen and (min-width: 1280px) {
+	
+}
