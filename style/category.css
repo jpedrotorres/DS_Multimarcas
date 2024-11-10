@@ -161,8 +161,15 @@ main {
 }
 
 /*Estilizando a lista de produtos*/
+#product-group-category {
+	display: flex;
+	flex-direction: column;
+}
+
 .product-category {
 	display: flex;
+
+	margin-bottom: 15px;
 }
 
 .img-product-category {
@@ -171,10 +178,17 @@ main {
 	border-radius: 5px;
 
 	background: var(--colorTemp);
+
+	overflow: hidden;
+}
+
+#img-inside-categoryPage {
+	width: 100%;
+	height: 100%;
 }
 
 .info-product-category {
-	max-width: 200px;
+	max-width: 150px;
 	margin-left: 10px;
 	margin-top: 5px;
 
@@ -289,6 +303,8 @@ main {
 
 /*Estilizando botões para as páginas de produtos*/
 #btn-pages-category {
+	order: 1;
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -311,6 +327,14 @@ main {
 
 .change-page {
 	text-transform: capitalize;
+}
+
+.front-page {
+	order: 1;
+}
+
+.back-page {
+	order: -1;
 }
 
 .number-pages {

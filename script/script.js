@@ -177,6 +177,37 @@ function changePathGeneral(category, product= "") {
 	pathActual.innerText= pathChild
 }
 
+function addBtnPage(page, pages= 1) {
+	const btnsPage= document.querySelector("#btn-pages-category")
+
+	if(pages>1) {
+		const btnFront= document.createElement("div")
+		btnFront.classList.add("btn-page", "change-page", "front-page")
+
+		btnFront.innerHTML= "seguinte <i class='bx bx-chevron-right'></i>"
+
+		btnsPage.appendChild(btnFront)
+
+		for(let i=1; i< pages; i++) {
+			const btnNumber= document.createElement("div")
+			btnNumber.classList.add("btn-page", "number-pages")
+
+			btnNumber.innerHTML= `${i+1}`
+
+			btnsPage.appendChild(btnNumber)
+		}
+
+		if(page> 0) {
+			const btnBack= document.createElement("div")
+			btnBack.classList.add("btn-page", "change-page", "back-page")
+
+			btnBack.innerHTML= "<i class='bx bx-chevron-left'></i> anterior"
+
+			btnsPage.appendChild(btnBack)
+		}
+	}
+}
+
 function fillCategoryPage(category, listProduct) {
 	const containerProducts= document.querySelector("#product-group-category")
 
@@ -202,6 +233,8 @@ function fillCategoryPage(category, listProduct) {
 
 	} while(amtProduct > 7)
 
+	addBtnPage(0, pages.length)
+
 	pages.forEach(page=> page.map(product=> {
 		const element= document.createElement("div")
 
@@ -217,10 +250,10 @@ function fillCategoryPage(category, listProduct) {
 
 		const imgInside= element.querySelector("#img-inside-categoryPage")
 
-		imgInside.src= `${product.image}/icon.webp`
+		imgInside.src= `${product.image}icon.webp`
 		imgInside.alt= `Imagem do produto: ${product.name}`
 
-		containerProducts.appendChild(element);
+		containerProducts.appendChild(element)
 	}))
 }
 
