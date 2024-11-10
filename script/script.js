@@ -137,12 +137,37 @@ function fillProductHome(listProduct, type) {
 		})
 }
 
+function changeSlider() {
+	const sliders= document.getElementsByClassName("item-main-carousel")
+	console.log(sliders)
+
+	const amtSlider= sliders.length
+	let sliderActual= sliders[positionActual]
+	console.log(positionActual)
+	positionActual<(amtSlider - 1) ? positionActual++ : positionActual= 0
+
+	sliderActual.classList.remove("item-checked-carousel")
+	sliderActual= sliders[positionActual]
+	sliderActual.classList.add("item-checked-carousel")
+}
+
+function autoSlider() {
+	setInterval(changeSlider, 5000)
+}
+
+function btnChangeSlider(value) {
+	positionActual+= value
+
+	changeSlider()
+}
+
 fillProductHome(getProducts(), "news-product")
 fillProductHome(getProducts(), "favorite-product")
 fillSpeedAcess(getCategories())
 fillCategoryMenu(getCategories())
 document.querySelector("#menu-category").onclick= openMenuDp
 document.querySelector("#menu-category").addEventListener("mouseenter", openMenuDp)
-
 document.querySelector("#icon-burguer").onclick= openMenu
 
+var positionActual= 0
+document.addEventListener('DOMContentLoaded', autoSlider)
