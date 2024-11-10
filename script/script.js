@@ -364,7 +364,6 @@ document.addEventListener('DOMContentLoaded', event=> {
 		fillSpeedAcess(getCategories())
 		fillCategoryMenu(getCategories())
 		document.querySelector("#menu-category").onclick= openMenuDp
-		document.querySelector("#menu-category").addEventListener("mouseenter", openMenuDp)
 		document.querySelector("#icon-burguer").onclick= openMenu
 		autoSlider()
 	}

@@ -125,7 +125,7 @@ body#body-cart {height: 100vh}
 
 @media screen and (min-width: 580px) {
 	.product-cart {
-		width: 380px;
+		width: 370px;
 		margin-left: 10px;
 	}
 
@@ -135,122 +135,82 @@ body#body-cart {height: 100vh}
 	}
 
 	.info-product-cart {
+		display: flex;
+		flex-direction: column;
+
 		margin-left: 10px;
 		margin-top: 10px;
 	}
-}
-
-@media screen and (min-width: 768px) {
-	.product-cart {
-
-	}
-
-	.img-product-cart {
-
-	}
-
-	.info-product-cart {
-
-	}
 
 	.title-product-cart {
-
+		flex-grow: 1;
 	}
 
 	.price-product-cart {
-
+		fle-grow: 1;
 	}
 
 	.amount-info-product {
-
+		flex-grow: 2;
 	}
 
-	.btn-amount-product {
-
+@media screen and (min-width: 768px) {
+	.img-product-cart {
+		width: 120px;
+		height: 120px;
 	}
 
-	.amount-product-cart {
-
+	.title-product-cart {
+		font-size: 18px;
 	}
 
-	.amount-info-product > i {
+	.price-product-cart {
+		font-size: 20px;
+	}
 
+	.amount-info-product {
+		font-size: 21px;
 	}
 }
 
 @media screen and (min-width: 992px) {
 	.product-cart {
-
+		width: 450px;
 	}
 
 	.img-product-cart {
-
-	}
-
-	.info-product-cart {
-
+		width: 150px;
+		height: 150px;
 	}
 
 	.title-product-cart {
-
+		font-size: 20px;
 	}
 
 	.price-product-cart {
-
+		font-size: 22px;
 	}
 
 	.amount-info-product {
-
-	}
-
-	.btn-amount-product {
-
-	}
-
-	.amount-product-cart {
-
-	}
-
-	.amount-info-product > i {
-
+		font-size: 25px;
 	}
 }
 
 @media screen and (min-width: 1280px) {
 	.product-cart {
-
-	}
-
-	.img-product-cart {
-
-	}
-
-	.info-product-cart {
-
+		width: 550px;
 	}
 
 	.title-product-cart {
-
+		font-size: 22px;
 	}
 
 	.price-product-cart {
-
+		font-size: 24px;
 	}
 
 	.amount-info-product {
-
-	}
-
-	.btn-amount-product {
-
-	}
-
-	.amount-product-cart {
-
-	}
-
-	.amount-info-product > i {
-
+		font-size: 27px;
 	}
 }
 
@@ -273,21 +233,19 @@ body#body-cart {height: 100vh}
 	border-color: var(--escuro4);
 }
 
-@media screen and (min-width: 580px) {
-	
-}
-
-@media screen and (min-width: 768px) {
-	
-}
-
-@media screen and (min-width: 992px) {
-	
+/*@media screen and (min-width: 768px) {
+	.checkbox-cart {
+		width: 20px;
+		height: 20px;
+	}
 }
 
 @media screen and (min-width: 1280px) {
-	
-}
+	.checkbox-cart {
+		width: 23px;
+		height: 23px;
+	}
+}*/
 
 /*Estilizando checkout do pedido carrinho*/
 #order-cart {
