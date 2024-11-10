@@ -554,6 +554,8 @@ main {
 
 /*Estilizando carrossel de relacionados*/
 #know-card {
+	max-width: 450px;
+	margin: auto;
 	margin-bottom: 25px;
 }
 
@@ -561,7 +563,8 @@ main {
 	display: flex;
 	gap: 10px;
 
-	height: 300px;
+	height: 330px;
+	margin: auto;
 
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
@@ -570,7 +573,6 @@ main {
 .card-inside-carousel {
 	flex: 0 0 min(260px, 100%);
 
-	width: 150px;
 	border-radius: 20px 20px 0 0;
 
 	background: var(--colorTemp);
@@ -580,7 +582,7 @@ main {
 }
 
 .img-card-carousel {
-	height: 150px;
+	height: 160px;
 
 	position: relative;
 	overflow: hidden;
@@ -611,6 +613,37 @@ main {
 	font-size: 12px;
 
 	margin-bottom: 0;
+}
+
+@media screen and (min-width: 580px) {
+	#know-card {
+		max-width: 700px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#know-card {
+		max-width: 900px;
+	}
+
+	.text-card-carousel {
+		font-size: 15px;
+		text-transform: capitalize;
+
+		margin-bottom: 10px;
+	}
+
+	.btn-card-carousel {
+		font-size: 14px;
+
+		margin-bottom: 0;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.cards-carousel {
+		justify-content: center;
+	}
 }
 
 /*Estilizando footer*/
