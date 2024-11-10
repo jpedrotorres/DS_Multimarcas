@@ -158,6 +158,74 @@ function btnChangeSlider() {
 	changeSlider()
 }
 
+function getProductofCategory(category, listProduct) {
+	return listProduct.filter(product=> product.category == category)
+}
+
+function changeH1Page(category) {
+	document.querySelector(".title-page").innerText = `${category}`
+}
+
+function changePathGeneral(category, product= "") {
+	const pathContainer= document.querySelector(".path-general")
+	const pathActual= pathContainer.querySelector("#path-child")
+
+	let pathChild= `${category}`
+
+	if(product!= "") pathChild.concat(` > ${product}`)
+
+	pathActual.innerText= pathChild
+}
+
+function fillCategoryPage(category, listProduct) {
+	const containerProducts= document.querySelector("#product-group-category")
+
+	let amtProduct= listProduct.length
+	let positionActual= 0
+	let pages= []
+
+	changePathGeneral(category)
+	changeH1Page(category)
+
+	if(amtProduct== 0) {
+		containerProducts.innerHTML= "Não há produtos nessa categoria!"
+
+		return 0
+	}
+
+	do {
+		if(amtProduct> 7) {
+			pages.push(listProduct.slice(positionActual, positionActual+ 7))
+
+			amtProduct-= 7
+		} else pages.push(listProduct.slice(positionActual, amtProduct))
+
+	} while(amtProduct > 7)
+
+	pages.forEach(page=> page.map(product=> {
+		const element= document.createElement("div")
+
+		element.classList.add("product-category")
+
+		element.innerHTML= `<div class= "img-product-category">
+						<img loading= "lazy" id= "img-inside-categoryPage">
+					</div>
+					<div class= "info-product-category">
+						<h2 class= "title-product-category">${product.name}</h2>
+						<p class= "price-product-category">r$${product.price.toFixed(2)}</p>
+					</div>`
+
+		const imgInside= element.querySelector("#img-inside-categoryPage")
+
+		imgInside.src= `${product.image}/icon.webp`
+		imgInside.alt= `Imagem do produto: ${product.name}`
+
+		containerProducts.appendChild(element);
+	}))
+}
+
+fillCategoryPage("camisas", getProductofCategory("camisas", getProducts()))
+
 fillProductHome(getProducts(), "news-product")
 fillProductHome(getProducts(), "favorite-product")
 fillSpeedAcess(getCategories())
