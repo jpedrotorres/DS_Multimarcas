@@ -1,5 +1,6 @@
 class Cproduct {
-	constructor(name, price, category, image, tag) {
+	constructor(id, name, price, category, image, tag) {
+		this.id= id;
 		this.name= name;
 		this.price= price;
 		this.category= category;
@@ -9,7 +10,8 @@ class Cproduct {
 }
 
 class Ccategory {
-	constructor(name, icon, important) {
+	constructor(id, name, icon, important) {
+		this.id= id;
 		this.name= name;
 		this.icon= icon;
 		this.important= important;
@@ -33,31 +35,31 @@ function openMenuDp() {
 
 function getProducts() {
 	const products= [
-		new Cproduct("camisa flamengo 2024", 100.00, "camisas", "./img/products/camisas/camisa-flamengo2024/", ["new", "favorite"]),
-		new Cproduct("camisa Al-Hilal", 125.00, "camisas", "./img/products/camisas/camisa-alhilal/", []),
-		new Cproduct("camisa fluminense 2023", 100.00, "camisas", "./img/products/camisas/camisa-fluminense2023/", ["favorite"]),
-		new Cproduct("camisa vasco 2023", 100.00, "camisas", "./img/products/camisas/camisa-vasco2023/", ["favorite"]),
-		new Cproduct("camisa botafogo 2024", 100.00, "camisas", "./img/products/camisas/camisa-botafogo2024/", []),
-		new Cproduct("camisa seleção brasileira 2024", 125.00, "camisas", "./img/products/camisas/camisa-selecao-brasil2024/", []),
-		new Cproduct("camisa seleção japão animes", 150.00, "camisas", "./img/products/camisas/camisa-selecao-japao-anime/", ["new"]),
-		new Cproduct("diesel 5 bar", 175.00, "relogios", "./img/products/relogios/diesel-5bar/", ["new"]),
-		new Cproduct("armani funcional", 199.00, "relogios", "./img/products/relogios/armani-funcional/", [""]),
-		new Cproduct("invicta venom hybrid", 300.00, "relogios", "./img/products/relogios/invicta-venom-hybrid/", ["new"]),
-		new Cproduct("invicta tria magnum", 700.00, "relogios", "./img/products/relogios/invicta-tria-magnum/", [""]),
-		new Cproduct("bota jordan chicago prime", 185.00, "tenis", "./img/products/tenis/bora-jordan-chicago-prime/", [""]),
-		new Cproduct("tênis nike dunk infantil", 150.00, "tenis", "./img/products/tenis/nike-dunk-infantil/", ["favorite"]),
-		new Cproduct("adidas falcon run", 160.00, "tenis", "./img/products/tenis/adidas-falcon-run/", [""]),
-		new Cproduct("mizuno creation 22", 145.00, "tenis", "./img/products/tenis/mizuno-creation22/", [""]),
-		new Cproduct("earpods usb-c", 20.00, "eletronicos", "./img/products/eletronicos/earpods-usbc/", ["favorite"]),
-		new Cproduct("aspirador portátil usb", 30.00, "eletronicos", "./img/products/eletronicos/aspirador-portatil-usb/", [""]),
-		new Cproduct("carregador iphone 15", 30.00, "eletronicos", "./img/products/eletronicos/carregador-iphone15/", ["new"]),
-		new Cproduct("scooter elétrica 2024", 8200.00, "eletronicos", "./img/products/eletronicos/scooter-eletrica/", [""]),
-		new Cproduct("fone bluetooth", 20.00, "eletronicos", "./img/products/eletronicos/fone-bluetooth/", ["new"]),
-		new Cproduct("caneca térmica stanley", 85.00, "copos", "./img/products/copos/caneca-stanley/", [""]),
-		new Cproduct("copo térmico stanley", 50.00, "copos", "./img/products/copos/copo-stanley/", ["favorite"]),
-		new Cproduct("garrafa térmica", 25.00, "copos", "./img/products/copos/garrafa-termica/", [""]),
-		new Cproduct("212 men 100ml", 70.00, "perfumes", "./img/products/perfumes/212-men/", [""]),
-		new Cproduct("ferrari black 100ml", 65.00, "perfumes", "./img/products/perfumes/ferrari-black/", [""])
+		new Cproduct("cm01", "camisa flamengo 2024", 100.00, "camisas", "./img/products/camisas/camisa-flamengo2024/", ["new", "favorite"]),
+		new Cproduct("cm02", "camisa Al-Hilal", 125.00, "camisas", "./img/products/camisas/camisa-alhilal/", []),
+		new Cproduct("cm03", "camisa fluminense 2023", 100.00, "camisas", "./img/products/camisas/camisa-fluminense2023/", ["favorite"]),
+		new Cproduct("cm04", "camisa vasco 2023", 100.00, "camisas", "./img/products/camisas/camisa-vasco2023/", ["favorite"]),
+		new Cproduct("cm05", "camisa botafogo 2024", 100.00, "camisas", "./img/products/camisas/camisa-botafogo2024/", []),
+		new Cproduct("cm06", "camisa seleção brasileira 2024", 125.00, "camisas", "./img/products/camisas/camisa-selecao-brasil2024/", []),
+		new Cproduct("cm07", "camisa seleção japão animes", 150.00, "camisas", "./img/products/camisas/camisa-selecao-japao-anime/", ["new"]),
+		new Cproduct("rl01", "diesel 5 bar", 175.00, "relogios", "./img/products/relogios/diesel-5bar/", ["new"]),
+		new Cproduct("rl02", "armani funcional", 199.00, "relogios", "./img/products/relogios/armani-funcional/", [""]),
+		new Cproduct("rl03", "invicta venom hybrid", 300.00, "relogios", "./img/products/relogios/invicta-venom-hybrid/", ["new"]),
+		new Cproduct("rl04", "invicta tria magnum", 700.00, "relogios", "./img/products/relogios/invicta-tria-magnum/", [""]),
+		new Cproduct("tn01", "bota jordan chicago prime", 185.00, "tenis", "./img/products/tenis/bora-jordan-chicago-prime/", [""]),
+		new Cproduct("tn02", "tênis nike dunk infantil", 150.00, "tenis", "./img/products/tenis/nike-dunk-infantil/", ["favorite"]),
+		new Cproduct("tn03", "adidas falcon run", 160.00, "tenis", "./img/products/tenis/adidas-falcon-run/", [""]),
+		new Cproduct("tn04", "mizuno creation 22", 145.00, "tenis", "./img/products/tenis/mizuno-creation22/", [""]),
+		new Cproduct("el01", "earpods usb-c", 20.00, "eletronicos", "./img/products/eletronicos/earpods-usbc/", ["favorite"]),
+		new Cproduct("el02", "aspirador portátil usb", 30.00, "eletronicos", "./img/products/eletronicos/aspirador-portatil-usb/", [""]),
+		new Cproduct("el03", "carregador iphone 15", 30.00, "eletronicos", "./img/products/eletronicos/carregador-iphone15/", ["new"]),
+		new Cproduct("el04", "scooter elétrica 2024", 8200.00, "eletronicos", "./img/products/eletronicos/scooter-eletrica/", [""]),
+		new Cproduct("el05", "fone bluetooth", 20.00, "eletronicos", "./img/products/eletronicos/fone-bluetooth/", ["new"]),
+		new Cproduct("cp01", "caneca térmica stanley", 85.00, "copos", "./img/products/copos/caneca-stanley/", [""]),
+		new Cproduct("cp02", "copo térmico stanley", 50.00, "copos", "./img/products/copos/copo-stanley/", ["favorite"]),
+		new Cproduct("cp03", "garrafa térmica", 25.00, "copos", "./img/products/copos/garrafa-termica/", [""]),
+		new Cproduct("pf01", "212 men 100ml", 70.00, "perfumes", "./img/products/perfumes/212-men/", [""]),
+		new Cproduct("pf02", "ferrari black 100ml", 65.00, "perfumes", "./img/products/perfumes/ferrari-black/", [""])
 	]
 
 	return products
@@ -65,12 +67,12 @@ function getProducts() {
 
 function getCategories() {
 	const category= [
-		new Ccategory("camisas", "<i class='bx bxs-t-shirt'></i>", true),
-		new Ccategory("relogios", "<i class='bx bxs-watch'></i>", true),
-		new Ccategory("tenis", "<i class='bx bx-closet'></i>", true),
-		new Ccategory("eletronicos", "<i class='bx bx-devices'></i>", true),
-		new Ccategory("copos", "<i class='bx bx-coffee-togo'></i>", false),
-		new Ccategory("perfumes", "<i class='bx bx-spray-can'></i>", false)
+		new Ccategory("cm", "camisas", "<i class='bx bxs-t-shirt'></i>", true),
+		new Ccategory("rl", "relogios", "<i class='bx bxs-watch'></i>", true),
+		new Ccategory("tn", "tenis", "<i class='bx bx-closet'></i>", true),
+		new Ccategory("el", "eletronicos", "<i class='bx bx-devices'></i>", true),
+		new Ccategory("cp", "copos", "<i class='bx bx-coffee-togo'></i>", false),
+		new Ccategory("pf", "perfumes", "<i class='bx bx-spray-can'></i>", false)
 	]
 
 	return category
@@ -281,7 +283,6 @@ function getEspecialURL() {
 	requests.forEach(request=> {
 			let query= request.split("=")
 			let queryOBJ= {}
-			console.log(query)
 
 			queryOBJ[query[0]]= query[1]
 
@@ -304,10 +305,12 @@ var positionActual= 0
 document.addEventListener('DOMContentLoaded', event=> {
 	if(window.location.href.includes("category.html")) {
 		setPageCategory()
-
-		document.querySelector("#title-category").addEventListener("click", event=> setQueryURL("camisas", "carros"))
 	}
 })
+
+function clickProduct(e) {
+	e
+}
 
 document.addEventListener('DOMContentLoaded', event=> {
 	if(window.location.href.includes("index.html")) {
