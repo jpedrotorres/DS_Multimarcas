@@ -10,7 +10,7 @@ body#body-cart {height: 100vh}
 	#main-cart {
 		display: grid;
 		grid-template-columns: 65% 35%;
-		grid-template-rows: 5% 10% 85%;
+		grid-template-rows: 10% 15% 75%;
 
 		height: calc(100vh - 90px);
 	}
@@ -316,7 +316,7 @@ body#body-cart {height: 100vh}
 		grid-row: 3/4;
 
 		display: grid;
-		grid-template-rows: 20% 10% 20% 20% 30%;
+		grid-template-rows: 20% 10% 20% 30% 20%;
 		grid-template-columns: 100%;
 
 
