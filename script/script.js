@@ -18,6 +18,9 @@ class Ccategory {
 	}
 }
 
+function btnBack() {
+	history.back()
+}
 
 function openMenu() {
 	let menuH= document.querySelector("#menu-category")
@@ -46,7 +49,7 @@ function getProducts() {
 		new Cproduct("rl02", "armani funcional", 199.00, "relogios", "./img/products/relogios/armani-funcional/", [""]),
 		new Cproduct("rl03", "invicta venom hybrid", 300.00, "relogios", "./img/products/relogios/invicta-venom-hybrid/", ["new"]),
 		new Cproduct("rl04", "invicta tria magnum", 700.00, "relogios", "./img/products/relogios/invicta-tria-magnum/", [""]),
-		new Cproduct("tn01", "bota jordan chicago prime", 185.00, "tenis", "./img/products/tenis/bora-jordan-chicago-prime/", [""]),
+		new Cproduct("tn01", "bota jordan chicago prime", 185.00, "tenis", "./img/products/tenis/bota-jordan-chicago-prime/", [""]),
 		new Cproduct("tn02", "tênis nike dunk infantil", 150.00, "tenis", "./img/products/tenis/nike-dunk-infantil/", ["favorite"]),
 		new Cproduct("tn03", "adidas falcon run", 160.00, "tenis", "./img/products/tenis/adidas-falcon-run/", [""]),
 		new Cproduct("tn04", "mizuno creation 22", 145.00, "tenis", "./img/products/tenis/mizuno-creation22/", [""]),
@@ -391,20 +394,28 @@ function clickProductCategory() {
 
 var positionActual= 0
 
+document.addEventListener('DOMContentLoaded', event=> {
+	if(window.location.href.includes("cart.html")) {
+		document.getElementById("icon-back").onclick= btnBack
+	}
+})
 
 document.addEventListener('DOMContentLoaded', event=> {
 	if(window.location.href.includes("category.html")) {
 		setPageCategory()
 		clickProductCategory()
+
+		document.getElementById("icon-back").onclick= btnBack
 	}
 })
 
 document.addEventListener('DOMContentLoaded', event=> {
 	if(window.location.href.includes("product.html")) {
 		setPageProduct()
+
+		document.getElementById("icon-back").onclick= btnBack
 	}
 })
-
 
 document.addEventListener('DOMContentLoaded', event=> {
 	if(window.location.href.includes("index.html")) {
