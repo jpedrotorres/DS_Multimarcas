@@ -326,6 +326,10 @@ function getOBJById(id, listOBJ) {
 	return listOBJ.filter(element=> element.id == id)
 }
 
+function getOBJByName(name, listOBJ) {
+	return listOBJ.filter(element=> element.name == name)
+}
+
 function setPageProduct() {
 	let query= getEspecialURL()
 
@@ -338,7 +342,51 @@ function setPageProduct() {
 }
 
 function clickSpeedAcess() {
-	const btnAcess= document.querySelectorAll(".access-button")	
+	const btnAccess= document.querySelectorAll(".access-button")
+
+	btnAccess.forEach(element=> element.addEventListener("click", evt=> {
+		const nameCategory= element.querySelector(".name-access")
+
+		let category= nameCategory.innerText.toLowerCase()
+
+		window.open(`category.html?category=${category}`, target= "_self")
+	}))
+}
+
+function clickProductHome() {
+	const productCard= document.querySelectorAll(".product-card")
+
+	productCard.forEach(element=> element.addEventListener("click", evt=> {
+		const infoProduct= element.querySelector(".info-product-card")
+		const titleProduct= infoProduct.querySelector(".title-product-card")
+
+		let nameProduct= titleProduct.innerText.toLowerCase()
+
+		console.log(nameProduct)
+
+		let product= getOBJByName(nameProduct, getProducts())
+		console.log(product)
+
+		window.open(`product.html?category=${product[0].category}&product=${product[0].id}`, target= "_self")
+	}))
+}
+
+function clickProductCategory() {
+	const productCategory= document.querySelectorAll(".product-category")
+
+	productCategory.forEach(element=> element.addEventListener("click", evt=> {
+		const infoProduct= element.querySelector(".info-product-category")
+		const titleProduct= infoProduct.querySelector(".title-product-category")
+
+		let nameProduct= titleProduct.innerText.toLowerCase()
+
+		console.log(nameProduct)
+
+		let product= getOBJByName(nameProduct, getProducts())
+		console.log(product)
+
+		window.open(`product.html?category=${product[0].category}&product=${product[0].id}`, target= "_self")
+	}))
 }
 
 var positionActual= 0
@@ -347,6 +395,7 @@ var positionActual= 0
 document.addEventListener('DOMContentLoaded', event=> {
 	if(window.location.href.includes("category.html")) {
 		setPageCategory()
+		clickProductCategory()
 	}
 })
 
@@ -366,5 +415,8 @@ document.addEventListener('DOMContentLoaded', event=> {
 		document.querySelector("#menu-category").onclick= openMenuDp
 		document.querySelector("#icon-burguer").onclick= openMenu
 		autoSlider()
+
+		clickSpeedAcess()
+		clickProductHome()
 	}
 })

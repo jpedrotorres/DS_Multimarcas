@@ -170,6 +170,7 @@ main {
 	display: flex;
 
 	margin-bottom: 15px;
+	cursor: pointer;
 }
 
 .img-product-category {
